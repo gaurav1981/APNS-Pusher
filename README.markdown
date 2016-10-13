@@ -1,36 +1,37 @@
-# APNS Pusher
-A simple debug application for apple push notification service (APNS).
+# Knuff
+The debug application for Apple Push Notification Service (APNs).
 
-[Download the latest version](https://github.com/blommegard/APNS-Pusher/releases "Download") 
+[Download the latest version](https://github.com/KnuffApp/Knuff/releases "Download")
+
+![knuff-preview](https://cloud.githubusercontent.com/assets/499192/12481271/36b610e0-c048-11e5-9be6-ee9e996036a2.png)
 
 ## Features
-* Send push notifications to APNS (Apple Push Notification Service) very easy (no configuration needed at all)
-* Grabs the certificate right from your kechain
-* Get the device token autimaticaly via bonjour, no need to log (or similar), usefull when not in sandbox mode
+* Send push notifications to APNS (Apple Push Notification Service) very easily (no configuration needed at all)
+* Load / Save documents including token and JSON payload
+* Grabs the certificate right from your keychain
+* Get the device token automatically; forget about manually retrieving the device token through logging or similar techniques. Even more useful when not in sandbox mode
 * Support for error response codes
-* Development/Production environment
-* Custom JSON payload
-* Identity export to PEM format
+* Detects Development/Production environment automatically
+* Supports universal certificates
+* Custom JSON payloads
+* Identity export to PEM format (⌘ + E)
 
-## Usage of automatic token detection (iOS6+)
-* Copy the files SBAPNSPusher.h/m to your project
-* …or use [Cocoapods](http://cocoapods.org/):
- ```ruby
-pod "SBAPNSPusher", "~> 2.2.1"
- ```
+## Knuff iOS App
 
-* Run the following code in ```application:didFinishLaunchingWithOptions:```
+We created an iOS companion app to make it even easier to get up and running with APNs, download it from the [App Store](https://itunes.apple.com/us/app/knuff-the-apns-debug-tool/id993435856).
 
- ```objective-c
-[SBAPNSPusher start];
- ```
+## Usage of automatic token detection (iOS8+)
 
-* Start the app and make sure your on the same wifi
+To use this feature with your own apps, have a look at [Knuff-Framework](https://github.com/KnuffApp/Knuff-Framework)
 
-## Screenshots
-![Screenshot](https://github.com/blommegard/APNS-Pusher/raw/master/Screenshots/main.png "Main")
-![Screenshot](https://github.com/blommegard/APNS-Pusher/raw/master/Screenshots/certificates.png "Certificates")
+## System Requirements
 
+Due to the usage of the HTTP/2 protocol, Knuff only supports OS X El Capitan 10.11+
 
 ## License
-APNS Pusher is released under the MIT-license (see the LICENSE file)
+
+Knuff is licensed under [The MIT License (MIT)](LICENSE).
+
+## More Info
+
+Have a question? Please [open an issue](https://github.com/KnuffApp/Knuff/issues/new)!
